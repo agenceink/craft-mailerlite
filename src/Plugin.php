@@ -23,7 +23,7 @@ use agenceink\craftmailerlite\services\MailerliteService;
 class Plugin extends BasePlugin {
     public string $schemaVersion = '1.0.0';
     public bool $hasCpSettings = true;
-    public bool $hasCpSection = true;
+    public bool $hasCpSection = false;
     public static $plugin;
 
     public static function config(): array {
