@@ -1,0 +1,14 @@
+{# @var plugin \agenceink\craftmailerlite\Plugin #}
+{# @var settings \agenceink\craftmailerlite\models\Settings #}
+
+{% import '_includes/forms.twig' as forms %}
+
+{{ forms.autosuggestField ({
+    first: true,
+    label: "Enter your Mailerlite API key :",
+    name: "apiKey",
+    value: settings.apiKey,
+    suggestEnvVars: true,
+    required:true,
+})}}
+
