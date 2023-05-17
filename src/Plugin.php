@@ -10,7 +10,6 @@ use craft\base\Model;
 use craft\base\Plugin as BasePlugin;
 use agenceink\craftmailerlite\models\Settings;
 use agenceink\craftmailerlite\services\MailerliteService;
-use verbb\formie\integrations\emailmarketing\MailerLite;
 
 /**
  * MailerLite plugin

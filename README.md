@@ -1,6 +1,6 @@
 # MailerLite
 
-An easy tool to add users to your MailerLite lists.
+An easy tool to subscribe users to your MailerLite list.
 
 ## Requirements
 
