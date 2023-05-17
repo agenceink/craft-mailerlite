@@ -1,6 +1,6 @@
 {
     "name": "agenceink/craft-mailerlite",
-    "description": "An easy tool to add users to your MailerLite lists",
+    "description": "An easy tool to subscribe users to your MailerLite list",
     "type": "craft-plugin",
     "license": "mit",
     "version": "1.0.0",
