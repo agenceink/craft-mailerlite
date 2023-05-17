@@ -31,10 +31,10 @@ composer require agenceink/craft-mailerlite
 
 ## Usage
 
-This plugin allows you to collect a user email address and to add it to you subscribers list on MailerLite.
-It is mostly used to make your "subscribe to the newsletter" form easier!
+This plugin allows you to collect a user email address and adds it to your subscriber list on MailerLite.
+It is mostly used to make your "subscribe to our newsletter" forms easier!
 
-You will want to set up your MailerLite API key first in the plugin settings, as it will not work without a valid tokens. 
+You will want to set up your MailerLite API key in the plugin settings first, as it will not work without a valid token. 
 
 Next, you can create your form in your template :
 
@@ -44,13 +44,15 @@ Next, you can create your form in your template :
     {{ actionInput('mailerlite/newsletter/subscribe') }}
     {{ redirectInput('contact/thank-you') }}
 
+    <h3>Subscribe to our newsletter</h3>
+
     <label for="full-name">Your name :</label>
     <input type="text" id="fullname" name="full-name">
 
     <label for="email">Your email :</label>
     <input type="email" id="email" name="email" required>
 
-    <input type="submit" value="Send">
+    <input type="submit" value="Subscribe">
 </form>
 ```
 ### Required fields
@@ -66,7 +68,9 @@ The only optional field is `full-name`. If this field is not detected by the plu
 ### Using flash messages
 
 The plugin will set a `success` flash message on a successful form submission with the value `true` (or `1`).
+
 You can use it to detect the form submission and show a sucess message to your users.
 
-An BadRequestHttpException will be thrown by the plugin on errors. These can be a missing MailerLite API key, an invalid email address or any other error sent by the MailerLite API.
+A `BadRequestHttpException` will be thrown by the plugin on errors. These can be a missing MailerLite API key, an invalid email address or any other error sent by the MailerLite API.
+
 You'll also be able to find the plugin error messages in Craft's web logs.
