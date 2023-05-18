@@ -56,7 +56,7 @@ Next, you can create your form in your template :
 </form>
 ```
 
-This plugin also features an auto-subscription of your users if you own are running a CraftCMS Pro license and are allowing public registration. Just turn switch it on on the plugin settings!
+This plugin also features an auto-subscription of your users if you are allowing public registration! Just turn switch it on on the plugin settings. (Note: Multiple user accounts requires a CraftCMS Pro license)
 
 ### Required fields
 
