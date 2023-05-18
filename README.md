@@ -55,6 +55,9 @@ Next, you can create your form in your template :
     <input type="submit" value="Subscribe">
 </form>
 ```
+
+This plugin also features an auto-subscription of your users if you own are running a CraftCMS Pro license and are allowing public registration. Just turn switch it on on the plugin settings!
+
 ### Required fields
 
 The only required field is `email`.

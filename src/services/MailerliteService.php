@@ -57,7 +57,8 @@ class MailerliteService extends Component {
                         'content-type' => 'application/json',
                     ],
                 ]);
-
+                
+                Craft::info("[MAILERLITE] — Successfully subscribed " . $subscriberName);
                 return true;
                 
             } catch (ClientException $e) {

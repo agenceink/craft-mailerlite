@@ -13,7 +13,10 @@ use craft\helpers\App;
  * mailerlite settings
  */
 class Settings extends Model {
-   // API Key
+    // Wether the users should be auto-subscribed on website registration
+    public $registration = false;
+
+    // API Key
     public $apiKey;
     public function getApiKey(): string {
         return App::parseEnv($this->apiKey);

@@ -5,10 +5,15 @@
 
 {{ forms.autosuggestField ({
     first: true,
-    label: "Enter your Mailerlite API key :",
+    label: "Enter your Mailerlite API key:",
     name: "apiKey",
     value: settings.apiKey,
     suggestEnvVars: true,
     required:true,
-})}}
+}) }}
 
+{{ forms.lightswitchField({
+    label: "Auto-subscribe users on website registration:",
+    name: "registration", 
+    on: settings.registration,
+}) }}

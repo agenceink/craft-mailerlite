@@ -8,6 +8,9 @@ namespace agenceink\craftmailerlite;
 use Craft;
 use craft\base\Model;
 use craft\base\Plugin as BasePlugin;
+use craft\elements\User;
+use craft\services\Elements;
+use yii\base\Event;
 use agenceink\craftmailerlite\models\Settings;
 use agenceink\craftmailerlite\services\MailerliteService;
 
@@ -47,6 +50,20 @@ class Plugin extends BasePlugin {
         Craft::$app->onInit(function() {
             $this->attachEventHandlers();
             // ...
+        });
+
+        // == EVENT TRIGGERS == //
+        // After a user registration
+        Event::on(
+            Elements::class, 
+            Elements::EVENT_AFTER_SAVE_ELEMENT,
+            function(Event $event) {
+            if ($event->element instanceof User) {
+                $settings = $this->getSettings();
+                if ($settings->registration) {
+                    $this::$plugin->service->addSubscriber($event->element->email, $event->element->fullName);
+                }
+            }
         });
     }
     
