@@ -34,7 +34,8 @@
         "handle": "mailerlite",
         "name": "MailerLite",
         "developer": "Agence ink",
-        "documentationUrl": "https://github.com/agenceink/craft-mailerlite.git"
+        "documentationUrl": "https://github.com/agenceink/craft-mailerlite.git",
+        "changelogUrl": "https://raw.githubusercontent.com/agenceink/craft-mailerlite/main/CHANGELOG.md"
     },
     "scripts": {
         "check-cs": "ecs check --ansi",
