@@ -15,6 +15,39 @@ use yii\web\BadRequestHttpException;
 class MailerliteService extends Component {
     
     /**
+     * getGroups
+     * Parses the provided group string in settings and returns it as an array.
+     *
+     * @return array
+     */
+    private function getGroups(): array {
+        // Variables
+        $settings = Mailerlite::getInstance()->getSettings();
+        $groupsString = $settings->groups;
+
+        if ($groupsString == "") {
+            return [];
+        } else {
+            // Parse the groups string and check if they are valid integers
+            $numbers = explode(',', $groupsString);
+            $result = [];
+        
+            foreach ($numbers as $number) {
+                $number = trim($number);
+        
+                if (is_numeric($number)) {
+                    $result[] = (int) $number;
+                } else {
+                    $msg = "Error: Group ID should be an integer";
+                    Craft::error("[MAILERLITE] => ". $msg, __METHOD__);
+                    throw new BadRequestHttpException('Error: Group ID should be an integer');
+                }
+            }
+            return $result; 
+        }
+    }
+    
+    /**
      * addSubscriber
      *
      * @param  mixed $subscriberEmail
@@ -49,6 +82,7 @@ class MailerliteService extends Component {
                         "fields" => [
                             "name" => $subscriberName,
                         ],
+                        "groups" => $this->getGroups()
                     ],
                     'headers' => [
                         'X-MailerLite-ApiDocs' => 'true',

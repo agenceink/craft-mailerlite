@@ -21,4 +21,7 @@ class Settings extends Model {
     public function getApiKey(): string {
         return App::parseEnv($this->apiKey);
     }
+
+    // Groups
+    public $groups = "";
 }

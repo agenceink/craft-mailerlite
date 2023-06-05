@@ -1,5 +1,8 @@
 # Release Notes for Mailerlite
 
+## 1.0.2 - 2023.06.05
+### Added
+- Added automatic group subscription
 ## 1.0.1 - 2023.05.18
 ### Added
 - Added a Craft::info log on successful subscription

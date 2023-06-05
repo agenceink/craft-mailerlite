@@ -12,6 +12,13 @@
     required:true,
 }) }}
 
+{{ forms.textField({ 
+    label: "Subscribe users to the following groups:",
+    instructions: "Please fill this field with a group id. You can use commas to specify multiple groups id.",
+    name: "groups",
+    value: settings.groups,
+ }) }}
+
 {{ forms.lightswitchField({
     label: "Auto-subscribe users on website registration:",
     name: "registration", 

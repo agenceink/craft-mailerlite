@@ -3,7 +3,7 @@
     "description": "An easy tool to subscribe users to your MailerLite list",
     "type": "craft-plugin",
     "license": "mit",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "support": {
         "email": "support@agenceink.com",
         "issues": "https://github.com/agenceink/craft-mailerlite.git/issues?state=open",
