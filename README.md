@@ -57,7 +57,7 @@ Next, you can create your form in your template :
 ```
 
 ### Features
-This plugin features an auto-subscription of your users if you are allowing public registration! Just turn switch it on on the plugin settings. (Note: Multiple user accounts requires a CraftCMS Pro license).
+This plugin features an auto-subscription of your users if you are allowing public registration! Just switch it on on the plugin settings. (Note: Multiple user accounts requires a CraftCMS Pro license).
 
 The plugin can also request Mailerlite API to register your users into specific groups. This can be enabled by filling the "groups" field in the settings page. (Note: An invalid group id will result in a 400 error on form submission.)
 
