@@ -17,10 +17,12 @@
     instructions: "Please fill this field with a group id. You can use commas to specify multiple groups id.",
     name: "groups",
     value: settings.groups,
- }) }}
-
-{{ forms.lightswitchField({
-    label: "Auto-subscribe users on website registration:",
-    name: "registration", 
-    on: settings.registration,
 }) }}
+
+{% if craft.app.edition %}
+    {{ forms.lightswitchField({
+        label: "Auto-subscribe users on website registration:",
+        name: "registration", 
+        on: settings.registration,
+    }) }}
+{% endif %}
